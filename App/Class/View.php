@@ -1,6 +1,5 @@
 <?php
 require __DIR__ . '/Crud.php';
-
 class View extends Crud
 {
     public static function Include($pagina, $substituir = [])
@@ -11,6 +10,7 @@ class View extends Crud
 
     public static function Replace($contents, $array = [])
     {
+
         if (count($array) > 0) {
             foreach ($array as $key => $val) {
                 $keys[] = '{{' . $key . '}}';

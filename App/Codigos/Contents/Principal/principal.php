@@ -1,5 +1,10 @@
 <?php
 
+$listSlider = Crud::Read("desleo_cursos", "where CURSO_SLIDE = 'S'", ["*"]);
+print_r($listSlider);
+
+
+
 $conts = [
     "titulo" => "Desafio Leo",
     "nome" => "Luan"

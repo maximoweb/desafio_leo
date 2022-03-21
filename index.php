@@ -3,6 +3,10 @@ require __DIR__ . '/App/Config/Router.php';
 require __DIR__ . '/App/Config/Cfg.php';
 require __DIR__ . "/App/Class/View.php";
 
+
+
+
+
 //Arrays dos diretorios a incluir / Utilizado para PHPs, CSS, JS, Metatags
 $dirIncludes[] = "/App/Codigos/Header/header";
 $dirIncludes[] = "/App/Codigos/Contents/" . caminhorDir;
