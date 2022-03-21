@@ -1,5 +1,19 @@
 <?php
 require __DIR__ . "/App/Class/View.php";
+
+//CRIANDO CAMINHOS / ROTAS
+$router = $_GET["router"] ?? "principal"; // Se não existir, utiliza o principal
+$router = explode("/", $router); // transforma em array
+$router = implode("/", array_filter($router)); //LIMPANDO OS ARRAYS VAZIOS
+$router = explode("/", $router); // novamente transformando em array
+foreach ($router as $dirota) {
+    $urlrota[] = ucfirst($dirota);
+}
+$filephp = end($router);
+$caminhorDir = implode("/", array_filter($urlrota)) . "/" . $filephp;
+//FIM - CRIANDO CAMINHOS / ROTAS
+
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,13 +27,9 @@ require __DIR__ . "/App/Class/View.php";
 
 <body>
     <?php
-    #Classe View com metodo Include para utilizar Template
-    View::Include(
-        "Header/header.html",
-        [
-            "titulo" => "Desafio Leo"
-        ]
-    );
+    require __DIR__ . "/App/Codigos/Header/header.php";
+    require __DIR__ . "/App/Codigos/Contents/" . $caminhorDir . '.php';
+    require __DIR__ . "/App/Codigos/Footer/footer.php";
     ?>
 </body>
 
