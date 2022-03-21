@@ -1,6 +1,6 @@
 <?php
 #Classe View com metodo Include para utilizar Template
-View::Include(
+$header = View::Include(
     "Header/header",
     [
         "titulo" => "Desafio Leo",
@@ -8,3 +8,4 @@ View::Include(
         "usuario" => "J&uacute;lio C&eacute;sar"
     ]
 );
+echo $header;

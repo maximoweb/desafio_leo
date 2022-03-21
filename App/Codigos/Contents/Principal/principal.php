@@ -1,17 +1,12 @@
 <?php
 
-$listSlider = Crud::Read("desleo_cursos", "where CURSO_SLIDE = 'S'", ["*"]);
-print_r($listSlider);
+$campos = ['CURSO_TITULO', 'CURSO_URL_AMIGAVEL', 'CURSO_IMAGEM', 'CURSO_TITULO'];
+$listSlider = Crud::Read("desleo_cursos", "where CURSO_SLIDE = 'S'", $campos);
+
+$conts["SLIDE"] = View::IncludeEach("Contents/Principal/Internas/slide", $listSlider);
 
 
-
-$conts = [
-    "titulo" => "Desafio Leo",
-    "nome" => "Luan"
-];
-
-
-//View::Include("Contents/Principal/principal", $conts);
-//caminhorDir - Pegando caminho do index
-// Mas pode ser colocado Manual
-View::Include("Contents/" . caminhorDir, $conts);
+//caminhorDir - Pegando caminho do Config/Router
+// Mas pode ser colocado Manual (igual Acima)
+$principal = View::Include("Contents/" . caminhorDir, $conts);
+echo $principal;
