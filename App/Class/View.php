@@ -5,7 +5,7 @@ class View extends Crud
 {
     public static function Include($pagina, $substituir = [])
     {
-        $pg = file_get_contents(__DIR__ . "/../View/" . $pagina);
+        $pg = file_get_contents(__DIR__ . "/../View/" . $pagina . ".html");
         echo self::Replace($pg, $substituir);
     }
 

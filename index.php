@@ -9,8 +9,8 @@ $router = explode("/", $router); // novamente transformando em array
 foreach ($router as $dirota) {
     $urlrota[] = ucfirst($dirota);
 }
-$filephp = end($router);
-$caminhorDir = implode("/", array_filter($urlrota)) . "/" . $filephp;
+define("filephp", end($router));
+define("caminhorDir", implode("/", array_filter($urlrota)) . "/" . filephp);
 //FIM - CRIANDO CAMINHOS / ROTAS
 
 
@@ -28,7 +28,7 @@ $caminhorDir = implode("/", array_filter($urlrota)) . "/" . $filephp;
 <body>
     <?php
     require __DIR__ . "/App/Codigos/Header/header.php";
-    require __DIR__ . "/App/Codigos/Contents/" . $caminhorDir . '.php';
+    require __DIR__ . "/App/Codigos/Contents/" . caminhorDir . '.php';
     require __DIR__ . "/App/Codigos/Footer/footer.php";
     ?>
 </body>
