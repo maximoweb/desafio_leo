@@ -1,3 +1,6 @@
+<?php
+require __DIR__ . "/App/Class/View.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +12,15 @@
 </head>
 
 <body>
-
+    <?php
+    #Classe View com metodo Include para utilizar Template
+    View::Include(
+        "Header/header.html",
+        [
+            "titulo" => "Desafio Leo"
+        ]
+    );
+    ?>
 </body>
 
 </html>
