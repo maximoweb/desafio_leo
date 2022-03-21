@@ -11,9 +11,11 @@ class View extends Crud
 
     public static function Replace($contents, $array = [])
     {
-        foreach ($array as $key => $val) {
-            $keys[] = '{{' . $key . '}}';
+        if (count($array) > 0) {
+            foreach ($array as $key => $val) {
+                $keys[] = '{{' . $key . '}}';
+            }
+            return str_replace($keys, $array, $contents);
         }
-        return str_replace($keys, $array, $contents);
     }
 }

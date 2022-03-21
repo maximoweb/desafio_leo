@@ -7,4 +7,6 @@ $conts = [
 
 
 //View::Include("Contents/Principal/principal", $conts);
-View::Include("Contents/" . caminhorDir, $conts); //caminhorDir - Pegando caminho do index
+//caminhorDir - Pegando caminho do index
+// Mas pode ser colocado Manual
+View::Include("Contents/" . caminhorDir, $conts);

@@ -1,0 +1,2 @@
+Arquicos SCSS colocados no mesmo diretorio dos htmls dentro de VIEW, obrigatoriamente deve ser especificado no compilador de CSS scss.php na Raiz
+Qualquer arquivo CSS/SCSS colocado dentro do diretorio assets/css, automaticamente é complicado no arquivo Único do Stylo do site

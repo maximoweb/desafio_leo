@@ -4,6 +4,7 @@ View::Include(
     "Header/header",
     [
         "titulo" => "Desafio Leo",
-        "nome" => "Luan"
+        "nome" => "Luan",
+        "usuario" => "J&uacute;lio C&eacute;sar"
     ]
 );

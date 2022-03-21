@@ -1,0 +1,335 @@
+
+
+#banner{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 345px;
+    background-color: black;
+    overflow: hidden;
+}
+
+#banner > div.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#banner > div.slide > img{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(15px);
+}
+
+
+#banner > div.slide button{
+    position: absolute;
+    z-index: 2;
+    width: 160px;
+    height: 60px;
+    background-color: chartreuse;
+    border-radius: 5px;
+    border:none;
+    bottom: 50px;
+    left: 50px;
+}
+
+#banner > div.slide .titulo{
+    position: absolute;
+    z-index: 2;
+    width: 600px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #FFFFFF66;
+    filter:drop-shadow(0 0 10px #00000066);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 32px;
+    color: #000000;
+    padding-left: 30px;
+    left: calc(50% - 300px);
+    top: calc(50% - 40px);
+}
+
+@media only screen and (max-width:640px){
+    #banner > div.slide .titulo{
+        width: calc(100% - 40px);
+        left: 20px;
+        font-size: 18px;
+    }    
+}
+
+#banner > div.slide button a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000000;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.blocoCinza{
+    background-color: #efefef;
+}
+
+#cursos,
+#gerenciar{
+    padding: 50px 40px;
+}
+
+.blocoCinza h2{
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cinza-padrao);
+    border-bottom: solid 1px var(--cinza-padrao);
+    padding-bottom: 10px;
+}
+
+#cursos .cards{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around
+}
+
+#cursos .cards .card{
+    width: 300px;
+    min-height: 310px;
+    background-color: transparent;
+    margin: 15px 5px;
+    border: solid 1px #cecece;
+    filter: drop-shadow(0 0 2px #cecece);
+    color: var(--cinza-padrao);
+    transition: 0.6s;            
+}
+
+@media only screen and (max-width:400px){
+    #cursos{
+        padding: 30px 20px;
+    }    
+}
+
+#cursos .cards .card:hover{
+    filter: drop-shadow(0 0 5px #4b4b4b);
+}
+
+#cursos .cards .card .imgCurso{
+    position: relative;
+    width: 100%;
+    height: 148px;
+    overflow: hidden;
+}
+
+#cursos .cards .card .imgCurso > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;        
+}
+
+#cursos .cards .card:hover .imgCurso > img{
+    transform: scale(1.1);
+}
+
+#cursos .cards .card h3{
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#cursos .cards .card .descr{
+    font-size: 14px;
+    padding: 0 20px 60px 20px;
+}
+
+#cursos .cards .card button{
+    display: block;
+    border: none;
+    background-color: #01a02a;
+    height: 38px;
+    border-radius: 19px;
+    width: calc(100% - 40px);position: absolute;
+    bottom: 15px;
+    left: 20px;
+    transition: 0.6s;
+}
+
+#cursos .cards .card button:hover{
+    background-color: #016b21;    
+}
+
+#cursos .cards .card button a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 38px;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+
+#cursos .cards .card.add{
+    border:dashed 2px var(--cinza-padrao);
+    background-image: url(../images/icon-addcurso.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#cursos .cards .card.add:hover{
+    filter: drop-shadow(0 0 2px #007700);
+}
+
+#cursos .cards .card.add a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-indent: -400px;
+    overflow: hidden;
+}
+
+
+
+/*ESTILOS FORM CURSO*/
+.formCurso{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.formCurso .itemform{
+    padding: 5px;
+}
+
+.formCurso .itemform label{
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.formCurso .itemform input,
+.formCurso .itemform select{
+    width: 100%;
+    height: 40px;
+    border: solid 1px var(--cinza-padrao);
+    font-size: 14px;
+    font-family: var(--font-padrao);
+}
+
+.formCurso .itemform textarea{
+    width: 100%;
+    line-height: 30px;
+    height: 100px;
+    border: solid 1px var(--cinza-padrao);
+    font-size: 14px;
+    font-family: var(--font-padrao);
+}
+
+
+.formCurso .itemform.um{
+    width: 100%;
+}
+
+.formCurso .itemform.dois{
+    width: 50%;
+}
+.formCurso .itemform.tres{
+    width: 33.33%;
+}
+
+.formCurso .itemform.quatro{
+    width: 25%;
+}
+
+.formCurso .itemform.quatro{
+    width: 25%;
+}
+
+.formCurso .itemform.doisDec{
+    width: 20%;
+}
+
+.formCurso .itemform.seisDec{
+    width: 60%;
+}
+
+.formCurso .itemform.oitoDec{
+    width: 80%;
+}
+
+#atualizarCurso{
+    border: none;
+    background-color: #01a02a;
+    height: 38px;
+    border-radius: 19px;
+    width: 200px;
+    left: 20px;
+    transition: 0.6s;
+    color: #FFFFFF;
+    margin: 5px;    
+}
+
+#atualizarCurso:hover{
+    background-color: #016b21;    
+}    
+
+#removerCurso{
+    border: none;
+    background-color: #740000;
+    height: 38px;
+    border-radius: 19px;
+    width: 200px;
+    left: 20px;
+    transition: 0.6s;
+    color: #FFFFFF;
+    margin: 5px;
+}
+
+#removerCurso:hover{
+    background-color: #ff0000;    
+}  
+
+
+@media only screen and (max-width:680px){
+    .formCurso .itemform.um{
+        width: 100%;
+    }
+    
+    .formCurso .itemform.dois{
+        width: 50%;
+    }
+    .formCurso .itemform.tres{
+        width: 33.33%;
+    }
+    
+    .formCurso .itemform.quatro{
+        width: 25%;
+    }
+    
+    .formCurso .itemform.quatro{
+        width: 25%;
+    }
+    
+    .formCurso .itemform.doisDec{
+        width: 50%;
+    }
+    
+    .formCurso .itemform.seisDec{
+        width: 100%;
+    }    
+}
