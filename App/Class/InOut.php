@@ -4,6 +4,17 @@
 class InOut
 {
 
+    public static function htmlE($str)
+    {
+        if (is_array($str)) {
+            foreach ($str as $ch => $val) {
+                $str[$ch] = self::htmlE($val);
+            }
+            return $str;
+        } else {
+            return htmlentities($str);
+        }
+    }
 
     public static function utf8D($str)
     {
