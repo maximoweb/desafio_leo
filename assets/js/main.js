@@ -1,5 +1,8 @@
 $(document).ready(function () {
     console.log("Carregou Main.js - Desafio LEO");
+
+    var urlcod = "App/Ajax/gerenciar-cursos.php";
+
     $("body").on("click", "#Modal span.btnFechar", function () {
         $("body").removeClass("overlay Modal");
     })
@@ -24,7 +27,7 @@ $(document).ready(function () {
         var myForm = document.querySelector('form#formCurso');
         var formData = new FormData(myForm);
         $.ajax({
-            url: 'ajax/gerenciar-cursos.php',
+            url: urlcod,
             type: 'POST',
             data: formData,
             success: function (res) {
@@ -51,7 +54,7 @@ $(document).ready(function () {
             $("body").addClass("overlay");
             $("#loading").addClass("active");
             var dados = $('form#formCurso').serialize();
-            $.get('ajax/gerenciar-cursos.php', "ACAO=delete&" + dados, function (res) {
+            $.get(urlcod, "ACAO=delete&" + dados, function (res) {
                 console.log(res);
                 var ret = JSON.parse(res);
                 if (ret.sts == "ok") {
@@ -72,7 +75,7 @@ $(document).ready(function () {
     if (CURSO_ID > 0) {
         $("body").addClass("overlay");
         $("#loading").addClass("active");
-        $.get("ajax/gerenciar-cursos.php", "ACAO=listar&CURSO_ID=" + CURSO_ID, function (res) {
+        $.get(urlcod, "ACAO=listar&CURSO_ID=" + CURSO_ID, function (res) {
             console.log(res);
             var ret = JSON.parse(res);
             if (ret.CURSO_ID == 0) {

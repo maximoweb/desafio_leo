@@ -1,0 +1,50 @@
+<section class="blocoCinza">
+    <div class="max-width" id="gerenciar">
+        <h2>Gerenciar Cursos</h2>
+        <h4>
+            {{nomeacao}} Curso
+        </h4>
+
+        <form onsubmit="return false" id="formCurso">
+            <input type="hidden" name="CURSO_SESSION_ID" id="CURSO_SESSION_ID" value="{{SESID}}">
+            <div class="formCurso">
+                <div class="itemform doisDec">
+                    <label>#ID</label>
+                    <input type="text" name="CURSO_ID" id="CURSO_ID" value="{{CURSOID}}" readonly>
+                </div>
+                <div class="itemform doisDec">
+                    <label>Status</label>
+                    <select type="text" name="CURSO_STATUS" id="CURSO_STATUS">
+                        <option value="A">Ativo</option>
+                        <option value="I">Inativo</option>
+                    </select>
+                </div>
+                <div class="itemform seisDec">
+                    <label>Titulo</label>
+                    <input type="text" name="CURSO_TITULO" id="CURSO_TITULO">
+                </div>
+                <div class="itemform um">
+                    <label>URL Amig&aacute;vel</label>
+                    <input type="text" name="CURSO_URL_AMIGAVEL" id="CURSO_URL_AMIGAVEL">
+                </div>
+                <div class="itemform um">
+                    <label>Descri&ccedil;&atilde;o</label>
+                    <textarea name="CURSO_DESCRICAO" id="CURSO_DESCRICAO"></textarea>
+                </div>
+                <div class="itemform oitoDec">
+                    <label>Imagem do Curso</label>
+                    <input name="CURSO_IMG" id="CURSO_IMG" type="file" />
+                </div>
+                <div class="itemform doisDec">
+                    <label>Mostrar como Slide?</label>
+                    <select type="text" name="CURSO_SLIDE" id="CURSO_SLIDE">
+                        <option value="S">SIM</option>
+                        <option value="N">N&Atilde;O</option>
+                    </select>
+                </div>
+                <button id="atualizarCurso">{{nomeacao}}</button>
+                {{BTNEXCLUIR}}
+            </div>
+        </form>
+    </div>
+</section>

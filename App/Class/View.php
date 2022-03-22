@@ -4,18 +4,20 @@ class View extends Crud
 {
     public static function Include($pagina, $substituir = [])
     {
-        $pg = file_get_contents(__DIR__ . "/../View/" . $pagina . ".html");
+        $pg = __DIR__ . "/../View/" . $pagina . ".html";
+        $pg = file_get_contents($pg);
         return self::Replace($pg, $substituir);
     }
 
     public static function Replace($contents, $array = [])
     {
-
         if (count($array) > 0) {
             foreach ($array as $key => $val) {
                 $keys[] = '{{' . $key . '}}';
             }
             return str_replace($keys, $array, $contents);
+        } else {
+            return $contents;
         }
     }
 

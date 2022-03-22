@@ -1,0 +1,105 @@
+.formCurso{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    .itemform{
+        padding: 5px;
+    }
+    .itemform{
+        label{
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+        input, select{
+            width: 100%;
+            height: 40px;
+            border: solid 1px var(--cinza-padrao);
+            font-size: 14px;
+            font-family: var(--font-padrao);
+        }
+        textarea{
+            width: 100%;
+            line-height: 30px;
+            height: 100px;
+            border: solid 1px var(--cinza-padrao);
+            font-size: 14px;
+            font-family: var(--font-padrao);
+        }
+        &.um{
+            width: 100%;
+        }
+        &.dois{
+            width: 50%;
+        }
+        &.tres{
+            width: 33.33%;
+        }
+        &.quatro{
+            width: 25%;
+        }
+        &.doisDec{
+            width: 20%;
+        }
+        &.seisDec{
+            width: 60%;
+        }
+        &.oitoDec{
+            width: 80%;
+        }
+    }
+}
+
+#atualizarCurso{
+    border: none;
+    background-color: #01a02a;
+    height: 38px;
+    border-radius: 19px;
+    width: 200px;
+    left: 20px;
+    transition: 0.6s;
+    color: #FFFFFF;
+    margin: 5px;    
+    &:hover{
+        background-color: #016b21;    
+    }    
+}
+
+#removerCurso{
+    border: none;
+    background-color: #740000;
+    height: 38px;
+    border-radius: 19px;
+    width: 200px;
+    left: 20px;
+    transition: 0.6s;
+    color: #FFFFFF;
+    margin: 5px;
+    &:hover{
+        background-color: #ff0000;    
+    }  
+}
+
+@media only screen and (max-width:680px){
+    .formCurso .itemform{
+        &.um{
+            width: 100%;
+        }
+        &.dois{
+            width: 50%;
+        }
+        &.tres{
+            width: 33.33%;
+        }
+        &.quatro{
+            width: 25%;
+        }
+        &.doisDec{
+            width: 50%;
+        }
+        &.seisDec{
+            width: 100%;
+        }    
+    }
+}

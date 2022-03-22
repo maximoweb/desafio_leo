@@ -1,9 +1,9 @@
 <?php
+session_start();
+$_SESSION["USU_ID"] = 1; //SIMULANDO QUE JÁ ESTEJA CONECTADO
 require __DIR__ . '/App/Config/Router.php';
 require __DIR__ . '/App/Config/Cfg.php';
 require __DIR__ . "/App/Class/View.php";
-
-
 
 
 

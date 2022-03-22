@@ -1,12 +1,12 @@
 <?php
 require __DIR__ . '/Conexao.php';
 
-//Metodos de Entrada e Saida de Dados (Date,Decimal,utf8)
+//InOut - Metodos de Entrada e Saida de Dados Formatados (Date,Decimal,utf8)
 require __DIR__ . '/InOut.php';
 
 class Crud extends Conexao
 {
-    static public function Read($table, $where, $campos = array())
+    static public function Read($table, $where, $campos = [])
     {
         $con = parent::Conn();
         $campos = "`" . implode("`,`", $campos) . "`";
