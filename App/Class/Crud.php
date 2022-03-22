@@ -65,4 +65,17 @@ class Crud extends Conexao
         $ret["affected_rows"] = mysqli_affected_rows($con);
         return $ret;
     }
+
+    public static function Delete($table, $where)
+    {
+        $con = parent::Conn();
+        $del = "delete from `$table` $where";
+        $ret['sts'] = 'ok';
+        if (!mysqli_query($con, $del)) {
+            $ret['sts'] = 'erro';
+            $ret["erro"] = mysqli_error($con);
+        }
+        $ret["affected_rows"] = mysqli_affected_rows($con);
+        return $ret;
+    }
 }
