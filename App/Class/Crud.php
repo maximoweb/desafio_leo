@@ -44,4 +44,25 @@ class Crud extends Conexao
 
         return $ret ?? mysqli_error($con);
     }
+
+    public static function Update($table, $where, $campos = array())
+    {
+        $con = parent::Conn();
+        #FILTER_SANITIZE_ADD_SLASHES - escapa caracteres especiais (\',\\)
+        $campos = filter_var_array($campos, FILTER_SANITIZE_ADD_SLASHES);
+        $campos = InOut::setDataIn($campos); //ajusta os dados para entrada no banco de dados
+        $ret["crud"] = 'update';
+        foreach ($campos as $key => $value) {
+            $cps[] = "`$key` = '$value'";
+        }
+        $camposset = implode(", ", $cps);
+        $ret['sts'] = 'ok';
+        $update = "update `$table` set $camposset $where ";
+        if (!mysqli_query($con, $update)) {
+            $ret['sts'] = 'erro';
+            $ret["erro"] = mysqli_error($con);
+        }
+        $ret["affected_rows"] = mysqli_affected_rows($con);
+        return $ret;
+    }
 }
