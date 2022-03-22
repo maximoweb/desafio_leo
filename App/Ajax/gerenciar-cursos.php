@@ -4,12 +4,9 @@ if (empty($_SESSION["USU_ID"])) {
     echo "Sem Permissão para visualizar essa Pagina";
     exit;
 }
-
 $USU_ID = $_SESSION["USU_ID"];
 
-
 require __DIR__ . '/../Class/Crud.php';
-
 
 #Verificar se o Metodo de requisição é POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $ext = explode(".", $arquivo["name"]);
             $ext = end($ext);
             $form["CURSO_IMAGEM"] = md5(microtime()) . "." . $ext;
-            if (!move_uploaded_file($arquivo["tmp_name"], '../assets/images/cursos/' . $form["CURSO_IMAGEM"])) throw new Exception("Erro ao Enviar Imagem");
+            if (!move_uploaded_file($arquivo["tmp_name"], __DIR__ . '/../../assets/images/cursos/' . $form["CURSO_IMAGEM"])) throw new Exception("Erro ao Enviar Imagem");
         }
 
         //Geralmente utilizao essa comparação caso o usuario esteja com a aba do form aberta com um usuário e abre outra com outro usuário/sessao
@@ -40,13 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $ret["msg"] = "Curso Inserido com sucesso!";
                 $ret["id"] = $create["id"];
             } else { //update
-                foreach ($form as $ch => $val) {
-                    $camposSet[] = "`$ch` = '$val'";
-                }
-                $camposSet = implode(", ", $camposSet);
-                $atualizar = "update `desleo_cursos` set $camposSet where `$CAMPOID` = $ID ";
-                //$ret["query"] = $atualizar;
-                if (!mysqli_query($conn, $atualizar)) throw new Exception(mysqli_error($conn));
+                $update = Crud::Update("desleo_cursos", "where CURSO_ID = $ID", $form);
+                if ($update["sts"] == "erro") throw new Exception($update["erro"]);
                 $ret["msg"] = "Curso Atualizado com sucesso!";
                 $ret["id"] = $ID;
             }
