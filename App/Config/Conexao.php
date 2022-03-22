@@ -1,5 +1,5 @@
 <?php
-//Conexao para o Banco Local
+//Conexao para o Banco de Dados
 $cfgbd["servidor"] = "localhost";
 $cfgbd["usuario"] = "root";
 $cfgbd["senha"] = "";
