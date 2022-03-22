@@ -16,6 +16,19 @@ class InOut
         }
     }
 
+    public static function htmlD($str)
+    {
+        if (is_array($str)) {
+            foreach ($str as $ch => $val) {
+                $str[$ch] = self::htmlD($val);
+            }
+            return $str;
+        } else {
+            return html_entity_decode($str);
+        }
+    }
+
+
     public static function utf8D($str)
     {
         if (is_array($str)) {
