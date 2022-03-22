@@ -53,16 +53,16 @@ $(document).ready(function () {
         if (confirm("Deseja Excluir esse Curso?")) {
             $("body").addClass("overlay");
             $("#loading").addClass("active");
-            var dados = $('form#formCurso').serialize();
+            var dados = "CURSO_ID=" + $('form#formCurso #CURSO_ID').val();
             $.get(urlcod, "ACAO=delete&" + dados, function (res) {
                 console.log(res);
                 var ret = JSON.parse(res);
                 if (ret.sts == "ok") {
-                    alert(ret.msg);
                     window.location = '';
                     return false;
+                } else {
+                    alert(ret.msg);
                 }
-                alert(ret.msg);
                 $("body").removeClass("overlay");
                 $("#loading").removeClass("active");
             })
