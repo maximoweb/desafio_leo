@@ -6,12 +6,8 @@
 <p align="left"> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> </p>
 
 
-Arquicos SCSS colocados no mesmo diretorio dos htmls dentro de VIEW, obrigatoriamente deve ser especificado no compilador de CSS scss.php na Raiz
-Qualquer arquivo CSS/SCSS colocado dentro do diretorio assets/css, automaticamente é complicado no arquivo Único do Stylo do site
-
-
-
-//TABELA BANCO DE DADOS
+//BANCO DE DADOS
+desafio_leo;
 
 CREATE TABLE `desleo_cursos` (                              
                  `CURSO_ID` int(8) NOT NULL AUTO_INCREMENT,                
@@ -29,3 +25,5 @@ CREATE TABLE `desleo_cursos` (
                ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4   
 
 
+? Arquivo de Configuração do Banco de Dados
+\App\Config\Conexao.php (Conexao_modelo.php - Alterar e Renomear)
