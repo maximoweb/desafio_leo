@@ -25,5 +25,5 @@ CREATE TABLE `desleo_cursos` (
                ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4   
 
 
-? Arquivo de Configuração do Banco de Dados
-\App\Config\Conexao.php (Conexao_modelo.php - Alterar e Renomear)
+<h3>Arquivo de Configuração para conexao com Banco de Dados</h3>
+<p>\App\Config\Conexao.php (Conexao_modelo.php - Alterar e Renomear)</p>
