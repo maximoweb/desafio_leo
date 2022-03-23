@@ -7,8 +7,8 @@ $(document).ready(function () {
         $("body").removeClass("overlay Modal");
     })
 
-    if (typeof (modalini) !== 'undefined') {
-        $("#Modal .contentsModal").load("modalunico.php");
+    if (modalini === true) {
+        $("#Modal .contentsModal").load("pgs/modal");
         $("body").addClass("Modal overlay");
     }
 
@@ -48,7 +48,7 @@ $(document).ready(function () {
         });
     });
 
-
+    //Remover Curso
     $("body").on("click", "#removerCurso", function () {
         if (confirm("Deseja Excluir esse Curso?")) {
             $("body").addClass("overlay");

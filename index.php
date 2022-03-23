@@ -34,6 +34,12 @@ $dirIncludes[] = "/App/Codigos/Footer/footer";
 
 <body>
     <?php
+    //MODAL INICIAL
+    echo "<script>var modalini = false</script>";
+    if (empty($_SESSION["MODALINI"])) echo "<script>var modalini = true</script>";
+    $_SESSION["MODALINI"] = true;
+    //unset($_SESSION["MODALINI"]);
+
     #loop das paginas as Incluir -- Array  "$dirIncludes" no inicio desse Codigo
     foreach ($dirIncludes as $direinc) require __DIR__ . $direinc . '.php';
     ?>
