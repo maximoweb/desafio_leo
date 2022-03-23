@@ -1,6 +1,6 @@
 RewriteEngine on
-RewriteRule ^scss/(.*) scss.php?router=$
-RewriteRule ^pgs/(.*) paginasgerais.php?router=$
+RewriteRule ^scss/(.*) scss.php?router=$1
+RewriteRule ^pgs/(.*) paginasgerais.php?router=$1
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*) index.php?router=$1 [QSA]
