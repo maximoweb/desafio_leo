@@ -31,7 +31,7 @@ class Crud extends Conexao
         return $ret;
     }
 
-    static public function Read($table, $where, $campos = [])
+    static public function Read($table, $where, $campos = [], $substr = [])
     {
         $con = parent::Conn();
         $campos = "`" . implode("`,`", $campos) . "`";
@@ -39,6 +39,9 @@ class Crud extends Conexao
         $sel = "select $campos from $table $where";
         $qry = mysqli_query($con, $sel);
         while ($ln = mysqli_fetch_assoc($qry)) {
+            foreach ($substr as $ch => $val) {
+                $ln[$ch] = strlen($ln[$ch]) > $val ? substr($ln[$ch], 0, $val) . '...' : $ln[$ch];
+            }
             $ret[] = InOut::setDataOut($ln);
         }
 

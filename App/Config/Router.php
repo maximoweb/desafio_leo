@@ -8,5 +8,15 @@ foreach ($router as $dirota) {
     $urlrota[] = ucfirst($dirota);
 }
 define("fileroute", end($router));
-define("caminhorDir", implode("/", array_filter($urlrota)) . "/" . fileroute);
+
+//Rotas Personalizadas - URL Amigavel
+switch ($router[0]) {
+    case "curso":
+        $rotaPersonalizada = "Curso/curso";
+        break;
+    default:
+        $rotaPersonalizada = implode("/", array_filter($urlrota)) . "/" . fileroute;
+}
+
+define("caminhorDir", $rotaPersonalizada);
 //FIM - CRIANDO CAMINHOS / ROTAS

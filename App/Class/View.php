@@ -24,7 +24,7 @@ class View extends Crud
     //Substituindo dados do View em loop
     public static function IncludeEach($dirpagina, $array = [])
     {
-        if (count($array) > 0) {
+        if (!empty($array)) {
             foreach ($array as $ar) {
                 $inSlide[] = View::Include($dirpagina, $ar);
             }
