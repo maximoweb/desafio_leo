@@ -27,5 +27,7 @@ CREATE TABLE `desleo_cursos` (
 
 <h3>Arquivo de Configuração para conexao com Banco de Dados</h3>
 <p>\App\Config\Conexao.php (Conexao_modelo.php - Alterar e Renomear)</p>
+<h3>Arquivo de Configuração URL Base</h3>
+<p>App\Config\Cfg.php</p>
 <h3>Requisitos</h3>
 <p>PHP 7.0 + / mysql / apache</p>
