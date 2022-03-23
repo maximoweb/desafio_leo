@@ -34,6 +34,7 @@ $dirIncludes[] = "/App/Codigos/Footer/footer";
 
 <body>
     <?php
+    #loop das paginas as Incluir -- Array  "$dirIncludes" no inicio desse Codigo
     foreach ($dirIncludes as $direinc) require __DIR__ . $direinc . '.php';
     ?>
 </body>
