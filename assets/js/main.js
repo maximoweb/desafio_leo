@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     $("body").on("click", "#btnPesquisa", function () {
         var termo = $("#cp_busca").val();
-        window.location = "busca/" + encodeURI(termo);
+        window.location = "busca?termo=" + encodeURI(termo);
     })
 
 
