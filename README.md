@@ -1,3 +1,4 @@
+<h1 align="center">Desenvolvedor: Julio César S Fernandes</h1>
 <h3 align="center">Processo Seletivo Back End - Desafio LEO</h3>
 
 
@@ -31,3 +32,27 @@ CREATE TABLE `desleo_cursos` (
 <p>App\Config\Cfg.php</p>
 <h3>Requisitos</h3>
 <p>PHP 7.0 + / mysql / apache</p>
+
+<hr>
+
+
+<h4>Desafio LEO Learning</h4>
+<h5>Orientações</h5>
+
+    <p>OK - Para o desenvolvimento do projeto deverá ser criado um repositório na conta do bitbucket ou github do candidato com o seguinte nome "desafio_leo"(ex.: http://bitbucket.org/seu_nome/desafio_leo).</p>
+    <p>OK - O desafio deve ser armazenado em seu respectivo repositório.</p>
+    <p>OK - Deve ser evidenciado a evolução do código desenvolvido (commitar sempre).</p>
+    <p>OK - No README deverá ter as informações do desenvolvedor e do projeto.</p>
+    <p>OK - Dê mais atenção a sua melhor skill.</p>
+
+<h5>Front-end</h5>
+
+<p>OK - O layout deverá respeitar um determinado grid com base no layout e ser acessível em resoluções menores, ex.: notebooks, tablets e smartphones. </p>
+<p>OK - O markup deve ser desenvolvido utilizando HTML5, CSS (sass/less), JS (livre para usar libs, mas seria interessante criar do zero)</p>
+<p>NÃO EFETUADO- e automatizador de tarefas (gulp/grunt).</p>
+<p>OK - Deve ser realizado o CRUD para: * Cursos. * Imagens, título, descrição e link do botão do Slideshow.</p>
+
+
+<h4>Modal</h4>
+<p>OK - Modal deve aparecer somente no primeiro acesso do usuário</p>
+
