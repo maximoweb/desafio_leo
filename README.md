@@ -35,7 +35,7 @@ CREATE TABLE `desleo_cursos` (
 
 <hr>
 <p>
-Camadas View html separadas da Código PHP<br/>
+Camadas View html(Template) separadas do Código PHP<br/>
 App/View - com arquivos/estrutura html<br>
 App/Codigos - com arquivos PHP utilizando o HTML da View como Template
 </p>
