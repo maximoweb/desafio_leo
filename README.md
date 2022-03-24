@@ -39,11 +39,11 @@ CREATE TABLE `desleo_cursos` (
 <h4>Desafio LEO Learning</h4>
 <h5>Orientações</h5>
 
-    <p>OK - Para o desenvolvimento do projeto deverá ser criado um repositório na conta do bitbucket ou github do candidato com o seguinte nome "desafio_leo"(ex.: http://bitbucket.org/seu_nome/desafio_leo).</p>
-    <p>OK - O desafio deve ser armazenado em seu respectivo repositório.</p>
-    <p>OK - Deve ser evidenciado a evolução do código desenvolvido (commitar sempre).</p>
-    <p>OK - No README deverá ter as informações do desenvolvedor e do projeto.</p>
-    <p>OK - Dê mais atenção a sua melhor skill.</p>
+<p>OK - Para o desenvolvimento do projeto deverá ser criado um repositório na conta do bitbucket ou github do candidato com o seguinte nome "desafio_leo"(ex.: http://bitbucket.org/seu_nome/desafio_leo).</p>
+<p>OK - O desafio deve ser armazenado em seu respectivo repositório.</p>
+<p>OK - Deve ser evidenciado a evolução do código desenvolvido (commitar sempre).</p>
+<p>OK - No README deverá ter as informações do desenvolvedor e do projeto.</p>
+<p>OK - Dê mais atenção a sua melhor skill.</p>
 
 <h5>Front-end</h5>
 
