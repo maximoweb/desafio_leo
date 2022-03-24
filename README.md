@@ -34,6 +34,14 @@ CREATE TABLE `desleo_cursos` (
 <p>PHP 7.0 + / mysql / apache</p>
 
 <hr>
+<p>
+Camadas View html separadas da Código PHP<br/>
+App/View - com arquivos/estrutura html<br>
+App/Codigos - com arquivos PHP utilizando o HTML da View como Template
+</p>
+<p>Arquicos SCSS colocados no mesmo diretorio dos htmls dentro de VIEW, obrigatoriamente deve ser especificado no compilador de CSS scss.php (Na Raiz).<br /> Qualquer arquivo CSS/SCSS colocado dentro do diretorio assets/css, automaticamente é complicado no arquivo Único do Stylo do site</p>
+
+<hr>
 
 
 <h3>Desafio LEO Learning</h3>
