@@ -50,7 +50,7 @@ CREATE TABLE `desleo_cursos` (
 <p>OK - O layout deverá respeitar um determinado grid com base no layout e ser acessível em resoluções menores, ex.: notebooks, tablets e smartphones. </p>
 <p>OK - O markup deve ser desenvolvido utilizando HTML5, CSS (sass/less), JS (livre para usar libs, mas seria interessante criar do zero)</p>
 <p>NÃO EFETUADO- e automatizador de tarefas (gulp/grunt).<br>
-<span style="color:#090">Arquicos SCSS colocados no mesmo diretorio dos htmls dentro de VIEW, obrigatoriamente deve ser especificado no compilador de CSS scss.php na Raiz Qualquer arquivo CSS/SCSS colocado dentro do diretorio assets/css, automaticamente é complicado no arquivo Único do Stylo do site</span>
+<span>Arquicos SCSS colocados no mesmo diretorio dos htmls dentro de VIEW, obrigatoriamente deve ser especificado no compilador de CSS scss.php na Raiz.<br /> Qualquer arquivo CSS/SCSS colocado dentro do diretorio assets/css, automaticamente é complicado no arquivo Único do Stylo do site</span>
 </p>
 
 <h4>Back-end</h4>
