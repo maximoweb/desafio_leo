@@ -36,8 +36,8 @@ CREATE TABLE `desleo_cursos` (
 <hr>
 
 
-<h4>Desafio LEO Learning</h4>
-<h5>Orientações</h5>
+<h3>Desafio LEO Learning</h3>
+<h4>Orientações</h4>
 
 <p>OK - Para o desenvolvimento do projeto deverá ser criado um repositório na conta do bitbucket ou github do candidato com o seguinte nome "desafio_leo"(ex.: http://bitbucket.org/seu_nome/desafio_leo).</p>
 <p>OK - O desafio deve ser armazenado em seu respectivo repositório.</p>
@@ -45,11 +45,13 @@ CREATE TABLE `desleo_cursos` (
 <p>OK - No README deverá ter as informações do desenvolvedor e do projeto.</p>
 <p>OK - Dê mais atenção a sua melhor skill.</p>
 
-<h5>Front-end</h5>
+<h4>Front-end</h4>
 
 <p>OK - O layout deverá respeitar um determinado grid com base no layout e ser acessível em resoluções menores, ex.: notebooks, tablets e smartphones. </p>
 <p>OK - O markup deve ser desenvolvido utilizando HTML5, CSS (sass/less), JS (livre para usar libs, mas seria interessante criar do zero)</p>
 <p>NÃO EFETUADO- e automatizador de tarefas (gulp/grunt).</p>
+
+<h4>Back-end</h4>
 <p>OK - Deve ser realizado o CRUD para: * Cursos. * Imagens, título, descrição e link do botão do Slideshow.</p>
 
 
